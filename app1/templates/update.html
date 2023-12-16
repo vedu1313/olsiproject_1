@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is Create Page</h1><br>
+    <form action="/update_book" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{i.id}}">
+        <input type="text" name="name" placeholder="name" value="{{i.name}}" id="">
+        <input type="text" name="author" placeholder="author" value="{{i.author}}" id="">
+        <input type="text" name="image" placeholder="image " value="{{i.image }}" id="">
+        <input type="text" name="description" placeholder="author" value="{{i.description}}" id="">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="{% static 'images/logo2.png' %}" />
+      </div>
+      <a href="">TEAMS</a>
+      <a href="">INDIVIDUALS</a>
+      <a href="">FEATURES</a>
+      <a href="">BLOG</a>
+      <a href="">CONTENT SPONSORSHIP</a>
+    </div>
+    <div class="card">
+      <h2>Creat Book</h2>
+      <div class="container">
+        <form action="register" method="POST">
+          {% csrf_token %}
+          <label for="name">NAME:</label><br />
+          <input type="text" name="name" placeholder="name" id="" /><br />
+          <label for="author">Author:</label><br />
+          <input type="text" name="author" placeholder="author" id="" /><br />
+          <label for="image">Author:</label><br />
+          <input type="text" name="image" placeholder="image" id="" /><br />
+          <label for="description">Author:</label><br />
+          <input type="text" name="description" placeholder="description" id="" /><br />
+          <br />
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
